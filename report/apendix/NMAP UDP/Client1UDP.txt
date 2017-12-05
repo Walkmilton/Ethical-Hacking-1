@@ -1,0 +1,48 @@
+# Nmap 7.60 scan initiated Thu Nov 30 17:28:21 2017 as: nmap -sU -p1-500 -v -v -sV -A -oN Client1UDP.txt –T4 192.168.0.10
+Failed to resolve "–T4".
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Increasing send delay for 192.168.0.10 from 400 to 800 due to 11 out of 11 dropped probes since last increase.
+Increasing send delay for 192.168.0.10 from 800 to 1000 due to 11 out of 19 dropped probes since last increase.
+Nmap scan report for 192.168.0.10
+Host is up, received arp-response (0.00052s latency).
+Scanned at 2017-11-30 17:28:21 GMT for 598s
+Not shown: 496 closed ports
+Reason: 496 port-unreaches
+PORT    STATE         SERVICE     REASON               VERSION
+123/udp open|filtered ntp         no-response
+137/udp open          netbios-ns  udp-response ttl 128 Microsoft Windows netbios-ssn (workgroup: UADTARGETNET)
+138/udp open|filtered netbios-dgm no-response
+500/udp open|filtered isakmp      no-response
+MAC Address: 00:0C:29:1F:15:CB (VMware)
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.60%E=4%D=11/30%OT=%CT=%CU=1%PV=Y%DS=1%DC=D%G=N%M=000C29%TM=5A20420B%P=i686-pc-linux-gnu)
+SEQ(CI=I%II=I)
+T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 1 hop
+Service Info: Host: CLIENT1; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| nbstat: NetBIOS name: CLIENT1, NetBIOS user: <unknown>, NetBIOS MAC: 00:0c:29:1f:15:cb (VMware)
+| Names:
+|   CLIENT1<00>          Flags: <unique><active>
+|   UADTARGETNET<00>     Flags: <group><active>
+|   CLIENT1<20>          Flags: <unique><active>
+|   UADTARGETNET<1e>     Flags: <group><active>
+| Statistics:
+|   00 0c 29 1f 15 cb 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.52 ms 192.168.0.10
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov 30 17:38:19 2017 -- 1 IP address (1 host up) scanned in 598.01 seconds

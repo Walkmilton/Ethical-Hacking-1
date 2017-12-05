@@ -1,0 +1,58 @@
+# Nmap 7.60 scan initiated Thu Nov 30 17:16:57 2017 as: nmap -sU -p1-500 -v -v -sV -A -oN Server2UDP.txt –T4 192.168.0.2
+Failed to resolve "–T4".
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Increasing send delay for 192.168.0.2 from 800 to 1000 due to 11 out of 21 dropped probes since last increase.
+Nmap scan report for 192.168.0.2
+Host is up, received arp-response (0.00055s latency).
+Scanned at 2017-11-30 17:16:58 GMT for 683s
+Not shown: 490 closed ports
+Reason: 490 port-unreaches
+PORT    STATE         SERVICE      REASON               VERSION
+42/udp  open|filtered nameserver   no-response
+53/udp  open          domain       udp-response ttl 128 Microsoft DNS 6.1.7601 (1DB1446A)
+| dns-nsid: 
+|_  bind.version: Microsoft DNS 6.1.7601 (1DB1446A)
+88/udp  open          kerberos-sec udp-response         Microsoft Windows Kerberos (server time: 2017-11-30 17:26:29Z)
+123/udp open          ntp          udp-response ttl 128 Microsoft NTP
+| ntp-info: 
+|_  receive time stamp: 2017-11-30T17:28:16
+137/udp open          netbios-ns   udp-response ttl 128 Microsoft Windows netbios-ssn (workgroup: UADTARGETNET)
+138/udp open|filtered netbios-dgm  no-response
+161/udp open|filtered snmp         no-response
+389/udp open          ldap         udp-response ttl 128 Microsoft Windows Active Directory LDAP (Domain: uadtargetnet.com, Site: lab-site1)
+464/udp open|filtered kpasswd5     no-response
+500/udp open|filtered isakmp       no-response
+MAC Address: 00:50:56:3A:42:9F (VMware)
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.60%E=4%D=11/30%OT=%CT=%CU=1%PV=Y%DS=1%DC=D%G=N%M=005056%TM=5A203FB5%P=i686-pc-linux-gnu)
+SEQ(CI=I%II=I)
+T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 1 hop
+Service Info: Host: SERVER2; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 5s, deviation: 0s, median: 5s
+| nbstat: NetBIOS name: SERVER2, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:3a:42:9f (VMware)
+| Names:
+|   SERVER2<00>          Flags: <unique><active>
+|   UADTARGETNET<00>     Flags: <group><active>
+|   UADTARGETNET<1c>     Flags: <group><active>
+|   SERVER2<20>          Flags: <unique><active>
+| Statistics:
+|   00 50 56 3a 42 9f 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.55 ms 192.168.0.2
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov 30 17:28:21 2017 -- 1 IP address (1 host up) scanned in 683.65 seconds
